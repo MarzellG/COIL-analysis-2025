@@ -54,7 +54,7 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 
 If you use this notebook or code for your project or publication, please cite:
 
-> [Marzell Gray], \"COIL Pre/Post Survey Analysis Code,\" GitHub, 2025. Available: https://github.com/marzellg/COIL.Analysis.2025
+> [Gray, M. (2025)], \"COIL Pre/Post Survey Analysis Code,\" GitHub, 2025. Available: https://github.com/marzellg/COIL.Analysis.2025
 
 ---
 
