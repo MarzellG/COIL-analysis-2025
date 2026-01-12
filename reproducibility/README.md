@@ -1,5 +1,12 @@
 # COIL PHP – Published Results Table (IRB-safe Recreation)
 
+# License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+# Citation
+If you recreate this notebook or code for your project or publication, please cite:
+
+[Gray, M. (2025)], "COIL Pre/Post Survey Analysis Code," GitHub, 2025. Available: https://github.com/marzellg/COIL.Analysis.2025
 This package **recreates the final manuscript results table** for the COIL PHP manuscript using **published summary statistics only**.
 
 ## What this is
