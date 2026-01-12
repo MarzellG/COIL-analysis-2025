@@ -1,0 +1,69 @@
+"""
+COIL PHP – Published Results Table Recreation (IRB-safe)
+
+This script recreates the final manuscript results table using only the published
+summary statistics and reported inferential values (t, p, Cohen's d, magnitude).
+
+No participant-level / IRB-protected data are used or required.
+"""
+
+import pandas as pd
+
+
+def build_published_results_table() -> pd.DataFrame:
+    """Return the final manuscript table exactly as published."""
+    data = pd.DataFrame({
+        "Item": [
+            "Cultural Self-Awareness",
+            "Knowledge of Cultural Worldview Frameworks",
+            "Empathy",
+            "Verbal & Nonverbal Communication",
+            "Curiosity",
+            "Openness",
+        ],
+        "Pre-Mean (SD)": [
+            "3.13 (0.68)",
+            "2.50 (0.68)",
+            "2.93 (0.45)",
+            "2.83 (0.65)",
+            "2.47 (0.63)",
+            "2.90 (0.71)",
+        ],
+        "Post-Mean (SD)": [
+            "3.37 (0.61)",
+            "2.93 (0.52)",
+            "3.23 (0.50)",
+            "3.03 (0.49)",
+            "2.90 (0.76)",
+            "3.03 (0.72)",
+        ],
+        "Mean Change": [
+            "0.24", "0.43", "0.30", "0.20", "0.43", "0.13"
+        ],
+        "t(66)": [
+            "1.51", "2.86", "2.60", "1.40", "2.55", "0.75"
+        ],
+        "p-value": [
+            ".136", ".006", ".012", ".166", ".013", ".459"
+        ],
+        "Cohen’s d": [
+            "0.37", "0.71", "0.63", "0.35", "0.62", "0.18"
+        ],
+        "Magnitude": [
+            "Small", "Moderate", "Moderate", "Small", "Moderate", "Small"
+        ],
+    })
+    return data
+
+
+def main() -> None:
+    df = build_published_results_table()
+    print(df.to_string(index=False))
+
+    # Optional exports (comment out if you do not want files created)
+    df.to_csv("results_table_published.csv", index=False)
+    df.to_excel("results_table_published.xlsx", index=False)
+
+
+if __name__ == "__main__":
+    main()
