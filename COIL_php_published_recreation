@@ -60,10 +60,5 @@ def main() -> None:
     df = build_published_results_table()
     print(df.to_string(index=False))
 
-    # Optional exports (comment out if you do not want files created)
-    df.to_csv("results_table_published.csv", index=False)
-    df.to_excel("results_table_published.xlsx", index=False)
-
-
 if __name__ == "__main__":
     main()
